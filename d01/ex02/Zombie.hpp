@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sahafono <sahafono@student.unit.ua >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/01 13:32:41 by sahafono          #+#    #+#             */
-/*   Updated: 2019/10/02 09:18:41 by sahafono         ###   ########.fr       */
+/*   Created: 2019/10/02 09:09:09 by sahafono          #+#    #+#             */
+/*   Updated: 2019/10/02 09:19:20 by sahafono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-#define PONY_HPP
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
 #include <iostream>
 #include <string>
 
-class Pony 
+class Zombie
 {
-    private:
-        std::string _name;
-        std::string _color;
-    public:
-        Pony(std::string name, std::string color);
-        ~Pony();
-        void setName(std::string name);
-        void setColor(std::string color);
-        std::string getName(void);
-        std::string getColor(void);
-};
 
+private:
+    std::string _zombieName;
+    std::string _zombieType;
+
+public:
+    Zombie(std::string name, std::string type = "type");
+    ~Zombie();
+
+    void announce();
+};
 
 #endif
