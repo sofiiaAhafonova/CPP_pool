@@ -5,19 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sahafono <sahafono@student.unit.ua >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/02 10:26:31 by sahafono          #+#    #+#             */
-/*   Updated: 2019/10/02 10:32:56 by sahafono         ###   ########.fr       */
+/*   Created: 2019/10/02 10:34:27 by sahafono          #+#    #+#             */
+/*   Updated: 2019/10/02 10:37:13 by sahafono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#include "Logger.hpp"
 
 int main(void)
 {
-    Human h;
+    Logger logger("log.txt");
 
-    std::string target = "Bad Guy";
-    h.action("meleeAttack", target);
-    h.action("rangedAttack", target);
-    h.action("intimidatingShout", target);
+    logger.log("console", "Program starting");
+    logger.log("file", "Program starting (file)");
+    logger.log("console", "nice");
+    logger.log("wrong", "error");
 }
